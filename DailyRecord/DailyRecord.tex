@@ -1,0 +1,390 @@
+%%% 工作日志_李旭佳_2014年.tex --- 
+
+%% Author: Lixujia <lixujia.cn@gmail.com>
+%% Version: $Id: 工作日志_李旭佳_2014年.tex,v 0.0 2014/07/09 09:16:10 lxj Exp$
+
+
+\documentclass[11pt]{article}
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage{float}      %不让表格浮动
+\usepackage{geometry}   %设置页边距的宏包
+\usepackage{titlesec}   %设置页眉页脚的宏包
+\usepackage[colorlinks=true]{hyperref}   %用于插入超链接
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{draftwatermark}
+%\usepackage{enumerate}
+\usepackage{pifont}
+\usepackage[toc,page,title,titletoc,header]{appendix} 
+%\usepackage[dvips]{color}
+\geometry{left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}  %设置 上、左、下、右 页边距
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+%\setCJKmainfont[BoldFont=SimHei]{WenQuanYi Micro Hei}
+%\setmainfont{WenQuanYi Zen Hei}
+\setsansfont{DejaVu Sans}
+\setCJKsansfont{DejaVu Sans}
+\setCJKmonofont{SimSun}
+\parindent 2em
+\linespread{1.3}
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+%\titleformat*{\subsubsection}{\large\bfseries}
+
+\definecolor{darkblue}{rgb}{0,0,0.54}
+
+\begin{document} \large
+%\newpagestyle{main}{            
+%  \sethead{保密}{工作日志 李旭佳 2014}{昆明迪森电气}       % 设置页眉
+%  \setfoot{ }{ }{ }                          % 设置页脚，可以在页脚添加 \thepage  显示页数
+%  \headrule                                               % 添加页眉的下划线
+%  \footrule                                               % 添加页脚的下划线
+%}
+%\pagestyle{main}    %使用该style
+
+\SetWatermarkText{ }%设置水印文字
+\begin{titlepage}
+  \includegraphics{logo.jpg}\\[3cm]
+    \rightline{\bfseries \fontsize{40}{45}\selectfont 2014年工作日志} \\
+    \noindent\color{darkblue}\rule[-1ex]{\textwidth}{8pt}\\[2.5ex]
+    \color{black}
+    \rightline{\bfseries \fontsize{32}{36}\selectfont 李旭佳} \\[8cm]
+  \begin{center}
+    %\noindent\rule[-1ex]{\textwidth}{1pt}\\[2.5ex]
+    \textsc{\huge\textbf{昆明迪森电气有限公司}}\\[0.2cm]
+    \textsc{\Large\textbf{Disthen Technologies Co.,Ltd}}\\[1.5cm]
+    \thispagestyle{empty}
+  \end{center}
+\end{titlepage}
+
+\SetWatermarkText{工作日志}%设置水印文字
+\SetWatermarkLightness{0.9}%设置水印亮度
+\SetWatermarkScale{1}%设置水印大小
+
+\hypersetup{CJKbookmarks,%
+  bookmarksnumbered,%
+  colorlinks,%
+  linkcolor=black,%
+  citecolor=black,%
+  plainpages=false,%
+  pdfstartview=FitH}
+
+\pagestyle{fancy}
+\lhead{保密}
+\chead{工作日志\ 李旭佳\ 2014}
+\rhead{\large
+  \includegraphics[height=1.5\baselineskip]{logo.jpg}
+}
+%\cfoot{\LaTeX}
+\cfoot{ }
+\rfoot{ }
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand\arraystretch{1.5}
+
+\pagenumbering{Roman}
+\newpage
+\rfoot{\thepage}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{ \Large 修订记录 } \\
+    \hline
+    \rowcolor{gray}
+    \color{white} 修订日期 & \color{white} 修订内容 & \color{white} 修订人\\
+    \hline
+    2014年7月1日 & 初版 & 李旭佳\\
+    \hline
+    2014年7月7日 & 修改了页码格式,去掉了总页数 & 李旭佳\\
+    \hline
+    2014年7月10日 & 将工作日志迁移到\LaTeX{}编写 & 李旭佳\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+%\renewcommand{\labelenumi}{\large
+%\includegraphics[height=1\baselineskip]{premark.png}
+%}
+%\makeatletter
+%\renewcommand{\theenumi}{\Roman{enumi}}
+\renewcommand\thesubsubsection{\color{blue} ☆}
+\renewcommand{\labelenumi}{\arabic{enumi})}
+
+\renewcommand{\contentsname}{目录}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\vspace*{1cm}
+
+%%%%##########################################################################
+
+\newpage
+\pagenumbering{arabic}
+\rfoot{第 \thepage 页}
+\setcounter{page}{1}
+
+\section{2014年7月工作日志}
+\subsection{2014年7月1日星期二}
+\subsubsection{工作时间}
+
+  09:10 – 17:50
+\subsubsection{总体内容}
+  \begin{enumerate}
+  \item 讨论新配电室项目设备端的主体框架。
+  \item 定义了一部分模块间交互消息的结构。
+  \item 查看ZeroMQ的文档中相关部分。
+  \end{enumerate}
+    
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 配电室项目的设备程序模块之间确定使用ZeroMQ来进行通信，因此可以使用ZeroMQ的各种成熟的解决方案。
+  \item 针对已经确定的模块，定义了上下行消息的消息格式。
+  \item ZeroMQ中已经做好的一些交互的模式，如“发布、订阅”“N-1”“N-N”等等。
+  \end{enumerate}
+  
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 开始编写新配电室项目中心模块的代码
+  \item 熟悉ZeroMQ的使用方式，并正确地在项目中使用。
+  \end{enumerate}
+
+\begin{center}
+  <完>
+\end{center}
+  
+\newpage
+
+\subsection{2014年7月2日星期三}
+\subsubsection{工作时间}
+  
+  09:10 – 17：30
+
+  \begin{enumerate}
+  \item 协助平台组编译了一个python2.7版本
+  \item 编写新配电室设备端数据模块代码
+  \end{enumerate}
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 平台组现在使用一个我以前编写的python程序来发送假数据到平台，以实现压力测试。但是该程序必须在python2.7版本下运行，CentOS默认的版本都是2.6。所以编译一个python2.7安装在192.168.1.2服务器。
+  \item 创建了新配电室核心数据区的初始化代码。完成了消息字符流到程序内部结构的转换函数（主要是针对字节序的问题已经字节对齐的问题）。程序内部结构到字符流转换的函数完成了一部分（一部分消息的处理）。
+  \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 编写新配电室程序
+  \item 熟悉ZeroMQ的使用
+  \end{enumerate}
+
+\begin{center}
+  <完>
+\end{center}
+
+
+\newpage
+
+\subsection{2014年7月3日星期四}
+\subsubsection{工作时间}
+
+  9:20-17:50
+
+  \begin{enumerate}
+  \item 编写新配电室设备端的代码
+  \item 协助拷贝原192.168.1.8的虚拟机文件到硬盘上
+  \end{enumerate}
+  
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 完成了昨天未完成的内部结构转换到字符流的函数。增加了模块内部保存的前端设备结构和前端结构创建和更新数据的函数。将原来定义的读取寄存器数据的命令结构分为读DI、读DO和读AI三种，并改为这三种数据分开处理。
+  \item 今天早上发现192.168.1.8上的数据恢复到一年以前了。具体原因是VMWare exsi无法加载磁盘阵列中的文件，导致启动失败，所以用了一个比较早的镜像。我将scsi上的虚拟机文件拷贝到一个本地磁盘上存起来，以防恢复的过程中损坏导致数据丢失。
+  \end{enumerate}
+  
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 搞清楚ZeroMQ中REQ-RSP模式的使用和订阅发布的区别和联系。
+  \item 编写新配电室程序
+  \end{enumerate}
+
+\begin{center}
+  <完>
+\end{center}
+
+\newpage
+
+\subsection{2014年7月4日星期五}
+\subsubsection{工作时间}
+
+  09:05-17:53
+
+  \begin{enumerate}
+  \item 用测试程序试验了ZMQ的“发布-订阅”和“请求-回应”
+  \item 编写新配电室数据模块的代码
+  \end{enumerate}
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item ZMQ的“发布-订阅”中，发布端发布一个信息，所有订阅端都能够接受到该信息。订阅端可以指定一个过滤条件，无法通过过滤的信息将不会被订阅端处理。文档说最新版的ZMQ过滤在发布端实现，不过这个特性没有亲自验证。在“请求-回应”中，回应端创建一个回应套接字就能够使用同一个套接字处理多个请求端发送的请求。比之TCP的accept创建多个套接字要简单的多。已验证过消息不会搞混。
+  \item 编写的代码中，增加了接受服务端读请求的处理函数。读数据时根据数据的“地址”来进行辨别，“地址”定义为相对于采集设备ID的一个运算值。读的一端对数据的“地址”的意义是不可见的。
+  \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 尝试将公路SPC中“前端”模块修改后应用到新配电室的代码中
+  \item 继续编写新配电室的代码
+  \end{enumerate}
+
+
+\begin{center}
+  <完>
+\end{center}
+
+\newpage
+
+\subsection{2014年7月7日星期一}
+\subsubsection{工作时间}
+
+  09:05-18:08
+
+  \begin{enumerate}
+  \item 编写新配电室代码
+  \item 修改SPC假数据发生的程序
+  \end{enumerate}
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 编写新配电室的代码。在公路SPC的前端模块的基础上修改代码来实现采集数据发送到现有的数据管理模块。做了一些工作然后又被自己推翻了，还是在原来前端模块的基础上加一层，把原来的结构转成现在的结构比较好。
+  \item 平台存库的spc消息只包含数据和事件。原来的产生和发送消息的程序将所有时间都记录下来了，不具有验证的作用。所以去掉了心跳消息和注册消息时间的记录。
+  \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 继续新配电室程序的编写
+  \item 继续熟悉ZMQ
+  \end{enumerate}
+
+\begin{center}
+  <完>
+\end{center}
+
+\newpage
+
+\subsection{2014年7月8日星期二}
+
+\subsubsection{工作时间}
+
+  09:01-18:03
+
+  \begin{enumerate}
+  \item 编写新配电室代码
+  \end{enumerate}
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 改写公路SPC代码，将数据用zmq发送到数据模块。能够通过编译，但是无法运行。可能是编译使用的工具链中的动态库和设备系统中使用的动态库版本对不上导致的。
+  \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 解决不能运行的问题
+  \item 接上一个研华IO模块试验数据发送情况
+  \item 在数据整合模块上开发一个数据展示模块
+  \end{enumerate}
+
+
+
+\centerline{<完>}
+
+
+\newpage
+\subsection{2014年7月9日星期三}
+
+\subsubsection{工作时间}
+
+  09:10-18:21
+\subsubsection{总体内容}
+  \begin{enumerate}
+  \item 编写新配电室代码
+  \item 接上研华IO模块测试
+  \end{enumerate}
+\subsubsection{具体内容}
+  \begin{enumerate}
+  \item 解决了程序不能运行的问题。原来是动态库找不到，但是它报的错误不准确，一次误导了一开始的判断。
+  \item 修改AI数据的格式为短整型。
+  \item 接上研华ADAM 4117模块来测试数据查询。数据可以正常发送到数据管理区域。
+  \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 编写订阅数据变化的模块
+  \item 调研串口屏界面的开发方法
+  \end{enumerate}
+
+\centerline{<完>}
+
+\newpage
+\subsection{2014年7月10日星期四}
+
+\subsubsection{工作时间}
+
+  09:05-18:20
+\subsubsection{工作内容}
+  \begin{enumerate}
+  \item 编写新配电室代码\newline
+    开始编写了一个订阅数据的模块，展示中心模块发布的数据。以后将在这个模块的基础上改为UI模块。
+  \item 调研了周立功串口屏的使用方法\newline
+    串口屏对于界面的开发感觉有方便的地方也有麻烦的地方。对于触摸的响应，示例中是用坐标来判断的，感觉有点不方便啊。
+  \item 讨论了数据产生状态的细节\newline
+    对于数据产生报警状态是在采集模块还是数据中心上层的模块展开了一个讨论，两种方式都有一定的特点和优势，还需要再考虑。
+    \end{enumerate}
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 对数据中心的接口做一些调整
+  \item 考虑数据传送和产生状态的方式
+  \item 继续调研周立功串口屏的开发
+  \end{enumerate}
+
+\centerline{<完>}
+
+\newpage
+\subsection{2014年7月11日 星期五}
+
+\subsubsection{工作时间}
+
+  09:10-18:52
+\subsubsection{工作内容}
+  \begin{enumerate}
+  \item 修改新配电室代码，修改了通道的属性，
+    从原来一个单独的值改成带时间和数据类型的结构。修改了模块间通信时消息的序列化过程。
+  \item 调研了Nand Flash存储大量数据的方法，Sqlite是一种比较方便的方案。在代码中新增了数据存储的模块，开始写数据存储的接口。
+  \end{enumerate}
+
+\subsubsection{明日计划}
+  \begin{enumerate}
+  \item 编写数据存储模块
+  \item 编写作为Slave的Modbus模块
+  \item 重新熟悉昆仑通态组态屏的使用
+  \end{enumerate}
+
+\centerline{<完>}
+
+
+\newpage
+\subsection{2014年7月14日 星期一}
+\subsubsection{工作时间}
+09:20-17:40
+\subsubsection{工作内容}
+\begin{enumerate}
+  \item 编写新配电室代码数据库部分。在数据库模块中增加了历史数据添加与查询、校准参数修改与查询、报警门限修改与查询等接口函数。
+\end{enumerate}
+
+\subsubsection{明日计划}
+\begin{enumerate}
+  \item 继续编写新配电室代码数据库部分，并作必要的单元测试
+  \item 编写modbus Slave模块，使程序可作为modbus的Slave运行
+  \item 制作组态屏界面
+\end{enumerate}
+
+\centerline{<完>}
+
+
+\end{document}
+
